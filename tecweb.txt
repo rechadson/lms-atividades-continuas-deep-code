@@ -1,0 +1,58 @@
+Django funcional com algumas paginas
+
+HTML/CSS/JS
+index - login - contato
+
+mesmo grupo da OPE - 
+
+LMS - Impacta / Pode Criar
+
+Learning management System
+
+-------------------------
+
+Preencher o cadastro do google form
+
+
+-----------------
+4-1
+Responda o seguinte cadastro: https://goo.gl/forms/mUFNKcb461L4cQLF2 
+Se não tiver ainda, vocês devem criar uma conta no Github.
+Entrem na URL https://classroom.github.com/g/1UJrlucp para entrar na atividade.
+Se ele pedir para associar a alguma conta, pule essa etapa (skip)
+Se o time que você faz parte já existir, apenas escolha ele e entre. Caso contrário crie um nome simples para o time.
+Um repositório do Github será criado para vocês, todas as próximas entregas serão feitas aqui
+
+
+-----------------
+4-2
+
+Com o repositório de time criado, vocês devem subir:
+Projeto Django completo, com o requirements.txt configurado e uma aplicação core devidamente instalada.
+A aplicação core deve ter X views configuradas da seguinte maneira:
+index: deve apenas devolver o arquivo index.html.
+contato: deve diferenciar POST de GET. No get, devolve apenas o arquivo contato.html. No POST, ele imprime no console (print) os dados passados no formulário.
+login: deve diferenciar POST de GET. No get, devolve apenas o arquivo login.html. No POST, deve testar se a senha passada é ‘teste123’ (sem aspas), se for deve imprimir “Usuário <EMAIL> entrou com sucesso!”, caso contrário deve imprimir “Usuário <EMAIL> digitou a senha errada!”.
+BÔNUS: O login certo deve redirecionar para o index novamente!
+
+
+
+-----------
+na pasta do repositorio
+
+.gitignore
+
+
+-------------------
+
+View - controle, entrada e saida de dados
+--------------
+urls - django
+
+from django.contrib import admin
+from django.urls import path
+from core.views import index
+urlpatterns = [
+    path('admin/', admin.site.urls),
+	path('', index),
+]
