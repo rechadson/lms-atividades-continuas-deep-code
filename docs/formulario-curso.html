@@ -1,0 +1,150 @@
+<html> 
+    <head>
+        <meta charset="utf-8">
+        <title>Deep Code</title>
+        <link rel="stylesheet" type="text/css" href="styels.css">
+        <style>
+     
+            .formInput {
+                margin: 17px;
+                margin-left: 20px; 
+            }
+            
+            .formBigText input {
+                height: 60px;
+                width: 320px;
+                color: white;
+            }
+            
+            .formBigText label {
+                float: left;
+                margin-right: 5px;
+                color: white;
+            }
+            
+            fieldset { 
+               
+                width:520px;
+                height:650px;
+                color: white;
+              }
+            
+            .buttonCurso {
+                color: white;
+                float: right;
+            }
+            
+            .buttonLimpar {
+                float: left;
+            }
+
+            li {
+                float: right;
+            }
+
+            li a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 16px;
+                text-decoration: none;
+            }
+
+            li a:hover {
+                background-color: white;
+            }
+
+            .img-menu{
+                float: left;
+                width: 10%;
+                padding-left: 2%;
+            }
+
+
+        </style>
+    </head>
+    <header>
+            <img src="img/deeplogo.png">
+            <div id="Menu">
+                <ul>
+                    <a href="index.html">Home</a>
+                    <a href="cursos.html">Cursos</a>
+                    <a href="formulario-disciplina.html">Novas Disciplinas</a>
+                    <a href="formulario-curso.html">Novos Cursos</a>
+                    <a href="login.html">Login</a>
+                </ul>
+            </div>
+        </header>
+    <body>        
+        <form action="/processa-dados-curso" method="post">
+            <fieldset>
+                <legend id="formulario" autocomplete="off" class="formInput"><h2>Novo Curso</h2></legend>
+                <div class="formInput">
+                    <label for="txtNome">Nome do Curso: </label>
+                    <input type="text" name="txtNome"/>
+                </div>
+                <div class="formInput formBigText">
+                    <label for="txtSobre">Sobre o Curso: </label>
+                    <input type="text" name="txtSobre"/>
+                </div>
+                <div class="formInput">
+                    <label for="sltDuracaoSemestres">Duração em Semestres: </label>
+                    <select name="sltDuracaoSemestres">
+                        <option value="" selected disabled hidden>Selecione</option>
+                        <option value="semestre4">4 Semestres</option>
+                        <option value="semestre6">6 Semestres</option>
+                        <option value="semestre8">8 Semestres</option>
+                    </select>
+                </div>
+                <div class="formInput">
+                    <label for="nmrDuracaoHoras">Duração em Horas: </label>
+                    <input type="number" name="nmrDuracaoHoras"> horas
+                </div>
+                <div class="formInput">
+                    <label for="cbxModalidade">Modalidade: </label>
+                    <input type="checkbox" name="cbxModalidade" value="opPre"/>Presencial
+                    <input type="checkbox" name="cbxModalidade" value="opEad"/>EAD
+                </div>
+                <div class="formInput">
+                    <label for="txtUnidade">Unidade: </label>
+                    <input type="text" name="txtUnidade"/>
+                </div>
+                <div class="formInput">
+                    <label for="cbxPeriodo">Periodo: </label>
+                    <input type="checkbox" name="cbxPeriodo" value="opMat"/>Matutino
+                    <input type="checkbox" name="cbxPeriodo" value="opNot"/>Noturno
+                </div>
+                <div class="formInput">
+                    <label for="nmrMatutino">Mensalidade Matutino: </label>
+                    R$ <input type="number" min="0.00" max="10000.00" step="0.01" name="nmrMatutino"/>
+                </div>
+                <div class="formInput">
+                    <label for="nmrNoturno">Mensalidade Noturno: </label>
+                    R$ <input type="number" min="0.00" max="10000.00" step="0.01" name="nmrNoturno"/>
+                </div>
+                <div class="formInput">
+                    <label for="txtCoordenador">Coordenador do Curso: </label>
+                    <input type="text" name="txtCoordenador"/>
+                </div>
+                <div class="formInput formBigText">
+                    <label for="txtSobreCoordenador">Sobre o Coordenador: </label>
+                    <input type="text" name="txtSobreCoordenador"/>
+                </div>
+                <div class="formInput buttonCurso">
+                    <button type="submit">Criar Curso</button>
+                </div>
+                <div class="formInput buttonLimpar">
+                    <button type="reset">Limpar</button>
+                </div>
+                <br/>
+                <br/>
+                <br/>
+            </fieldset>
+        </form>
+    </body>
+    <footer class="footer">
+            <p>"Valorize os pequenos começos"</p>
+        </footer>
+    </div>
+</html>
+
