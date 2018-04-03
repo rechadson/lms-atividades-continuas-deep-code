@@ -9,6 +9,7 @@ def contato(request):
         return render(request, 'contato.html')
     else:
         print (request.POST.get('nome'))
+        # E o campo idade?
         return render(request,'contato.html')
 
 def login(request):
@@ -19,6 +20,7 @@ def login(request):
             if request.POST.get("pwd") == 'teste123':
                 print("Usuario", request.POST.get('email'), "entrou com sucesso")
                 return render(request,'index.html')
+                # Render não é redirect!
             else:
                 print("Usuario", request.POST.get("email"), "Digitou a senha errada")
                 return render(request, 'login.html')

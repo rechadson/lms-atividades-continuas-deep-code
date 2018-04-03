@@ -22,6 +22,7 @@ from core import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('contato/', views.contato),
-    path('index/', views.index),
+    #path('index/', views.index), Deveria ser na raíz
+    path("", views.index),
     path('login/', views.login),
 ]
