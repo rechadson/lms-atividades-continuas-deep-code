@@ -1,101 +1,6 @@
 <html> 
     <head>
-        <style type="text/css">
-            body {
-                margin-top: 170px;
-                
-            }
-                    
-            .formInput {
-                margin: 17px;
-                margin-left: 20px; 
-            }
-            
-            .formBigText input {
-                height: 60px;
-                width: 320px;
-            }
-            
-            .formBigText label {
-                float: left;
-                margin-right: 5px;
-            }
-            
-            fieldset { 
-               
-                width:520px;
-                height:650px;
-              }
-            
-            .buttonCurso {
-
-                float: right;
-            }
-            
-            .buttonLimpar {
-
-
-                float: left;
-            }
-            
-            .header {
-                background-color: #000000;
-                text-align: right;
-                border: solid 1px Gray;
-                font-size:8pt;
-                font-family: Arial;
-                font-weight:bold;
-                width:100%;
-                color:Black;
-                position:fixed;
-                top:0px;
-                left:0px;
-            }
-            .footer {
-                background-color: #000000;
-                text-align: center;
-                padding:9px;
-                font-size:8pt;
-                font-family: Verdana;
-                font-weight: bold;
-                width: 100%;
-                color: white;
-                position: relative;
-                bottom: 0px;
-                left: 0px;
-            }
-            ul {
-                list-style-type: none;
-                margin: 0;
-                padding: 0;
-                overflow: hidden;
-                background-color: #000;
-            }
-
-            li {
-                float: right;
-            }
-
-            li a {
-                display: block;
-                color: white;
-                text-align: center;
-                padding: 16px;
-                text-decoration: none;
-            }
-
-            li a:hover {
-                background-color: #111111;
-            }
-
-            .img-menu{
-                float: left;
-                width: 10%;
-                padding-left: 2%;
-            }
-
-
-        </style>
+        <link href="style.css" rel="stylesheet">
     </head>
     <div class='header'>
         <header>
@@ -103,19 +8,20 @@
         </header>
     </div>
     <body>        
-        <form action="/processa-dados-curso" method="post">
+        <form action="#" method="post">
             <fieldset>
                 <legend id="formulario" autocomplete="off" class="formInput"><h2>Novo Curso</h2></legend>
                 <div class="formInput">
                     <label for="txtNome">Nome do Curso: </label>
                     <input type="text" name="txtNome"/>
                 </div>
-                <div class="formInput formBigText">
-                    <label for="txtSobre">Sobre o Curso: </label>
-                    <input type="text" name="txtSobre"/>
-                </div>
                 <div class="formInput">
+                    <label for="txtSobre">Sobre o Curso: </label>
+                    <textarea name="txtSobre"></textarea>
+                </div>
+                <div class="formInput semestre">
                     <label for="sltDuracaoSemestres">Duração em Semestres: </label>
+                    <br/>
                     <select name="sltDuracaoSemestres">
                         <option value="" selected disabled hidden>Selecione</option>
                         <option value="semestre4">4 Semestres</option>
@@ -123,39 +29,43 @@
                         <option value="semestre8">8 Semestres</option>
                     </select>
                 </div>
-                <div class="formInput">
-                    <label for="nmrDuracaoHoras">Duração em Horas: </label>
+                <div class="formInput horas">
+                    <label for="nmrDuracaoHoras">Duração em Horas: </label><br/>
                     <input type="number" name="nmrDuracaoHoras"> horas
                 </div>
-                <div class="formInput">
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <div class="formInput check">
                     <label for="cbxModalidade">Modalidade: </label>
                     <input type="checkbox" name="cbxModalidade" value="opPre"/>Presencial
                     <input type="checkbox" name="cbxModalidade" value="opEad"/>EAD
                 </div>
-                <div class="formInput">
-                    <label for="txtUnidade">Unidade: </label>
-                    <input type="text" name="txtUnidade"/>
-                </div>
-                <div class="formInput">
+                <div class="formInput check">
                     <label for="cbxPeriodo">Periodo: </label>
                     <input type="checkbox" name="cbxPeriodo" value="opMat"/>Matutino
                     <input type="checkbox" name="cbxPeriodo" value="opNot"/>Noturno
                 </div>
                 <div class="formInput">
-                    <label for="nmrMatutino">Mensalidade Matutino: </label>
+                    <label for="txtUnidade">Unidade: </label>
+                    <input type="text" name="txtUnidade"/>
+                </div>
+                <div class="formInput matutino">
+                    <label for="nmrMatutino">Mensalidade Matutino: </label><br/>
                     R$ <input type="number" min="0.00" max="10000.00" step="0.01" name="nmrMatutino"/>
                 </div>
-                <div class="formInput">
-                    <label for="nmrNoturno">Mensalidade Noturno: </label>
+                <div class="formInput noturno">
+                    <label for="nmrNoturno">Mensalidade Noturno: </label><br/>
                     R$ <input type="number" min="0.00" max="10000.00" step="0.01" name="nmrNoturno"/>
                 </div>
                 <div class="formInput">
-                    <label for="txtCoordenador">Coordenador do Curso: </label>
+                    <label for="txtCoordenador">Coordenador do Curso: </label><br/>
                     <input type="text" name="txtCoordenador"/>
                 </div>
                 <div class="formInput formBigText">
-                    <label for="txtSobreCoordenador">Sobre o Coordenador: </label>
-                    <input type="text" name="txtSobreCoordenador"/>
+                    <label for="txtSobreCoordenador">Sobre o Coordenador: </label><br/>
+                    <textarea name="txtSobreCoordenador"></textarea>
                 </div>
                 <div class="formInput buttonCurso">
                     <button type="submit">Criar Curso</button>
